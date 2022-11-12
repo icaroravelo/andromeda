@@ -10,17 +10,17 @@ const Header = () => {
     return (
         <div className='flex flex-1 items-center justify-between'>
             {/* Name & Navbar */}
-            <div className='flex items-center space-x-4'>
-                <Link to="/">
+            <div className='flex justify-center space-x-4'>
+                <Link to="/" className='logo items-center p-36'>
                     <h1
-                        className='text-gold text-3xl font-bold justify-start'>
+                        className='text-gold text-xl md:text-3xl justify-start'>
                         Andromeda
                     </h1>
                 </Link>
 
                 <li
                     className='list-none cursor-pointer hidden md:flex
-                space-x-4 text-gold mt-2'
+                space-x-4 text-gold mt-8'
                 >
                     <Link to="/">
                         <p>Início</p>
@@ -57,7 +57,7 @@ const Header = () => {
                     onClick={() => setToggle((prev) => !prev)}
                 />
 
-                <div className={`${toggle ? 'flex' : 'hidden'} z-50 bg-black-gradient absolute top-20 right-0 mx-4 bg-zinc-900/90 rounded-xl min-h-[200px] min-w-[175px] my-4 items-center`}>
+                <div className={`${toggle ? 'flex' : 'hidden'} z-50 bg-black-gradient absolute right-0 mx-4 bg-zinc-900/90 rounded-xl min-h-[200px] min-w-[175px] my-4 items-center`}>
                     <li className='list-none flex flex-col flex-1 cursor-pointer text-[16px] mr-10 text-gold text-center justify-center'>
                         <Link to="/">
                             <p className='hover:font-semibold'>Início</p>
