@@ -42,9 +42,9 @@ const Header = () => {
 
             {/* User Infos */}
             <div>
-                <div className='items-center space-x-1 right-10 ml-24 md:ml-36 flex'>
+                <div className='items-center space-x-1 right-10 ml-20 md:ml-36 flex'>
                     <span className='text-gold'>Ravelo</span>
-                    <img src={image} alt="User" className='h-[30px] rounded-full' />
+                    <img src={image} alt="User" className='h-[20px] md:h-[30px] rounded-full' />
                 </div>
             </div>
 
