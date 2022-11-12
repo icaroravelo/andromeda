@@ -23,11 +23,11 @@ const Carrousel = () => {
     // Efeito de carrossel
     const settings = {
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 4,
-        initialSlide: 0,
+        initialSlide: 1,
         responsive: [
             {
                 breakpoint: 1024,
@@ -65,7 +65,7 @@ const Carrousel = () => {
             <Slider {...settings}>
                 {movies.map((movie) => {
                     return (
-                        <div className='items-center justify-center flex mt-10'>
+                        <div className='items-center justify-center flex mt-10 row__posters'>
                             <div>
 
                                 <Link to={`/infos/${movie.id}`}>

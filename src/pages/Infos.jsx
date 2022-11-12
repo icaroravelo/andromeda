@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import Carrousel from '../components/Carrousel'
 import Header from '../components/Header'
-import Video from '../components/Video'
 import { API_KEY } from '../requests'
 
 const Infos = () => {
@@ -18,7 +16,7 @@ const Infos = () => {
             .then(response => response.json())
             .then(data => {
 
-                const { title, overview, poster_path, release_date } = data
+                const { title, overview, poster_path, release_date, homepage } = data
 
                 const movie = {
                     id,
@@ -26,6 +24,7 @@ const Infos = () => {
                     sinopse: overview,
                     image: `${image_path}${poster_path}`,
                     releaseDate: release_date,
+                    homepage
                 }
 
                 setMovie(movie)
@@ -39,25 +38,24 @@ const Infos = () => {
             {/* Header */}
             <Header />
 
-            <div className='flex justify-between'>
+            <div className='flex flex-col md:flex-row              justify-between'>
                 {/* Infos */}
-                <div className='flex flex-col'>
-                    <img src={movie.image} alt={movie.sinopse} className="h-[250px] rounded-xl mt-10" />
+                <div className='flex flex-col text-gold'>
+                    <img src={movie.image} alt={movie.sinopse} className="md:h-[250px] h-[225px] w-[200px] mx-auto rounded-xl mt-10 hover:h-[230px] md:hover:h-[270px] transition-all duration-1000 hover:border-2" />
                     <span className='mt-2'>{movie.title}</span>
                     <p className='mt-2'>{movie.releaseDate}</p>
+                    <p className='mt-2'>{movie.homepage}</p>
                 </div>
 
                 {/* Sinopse */}
                 <div className='mx-auto'>
                     <h1 className='text-2xl text-gold font-bold mt-10'>Sinopse</h1>
-                    <div className='max-w-[350px] text-center mt-4'>
-                        <span>
+                    <div className='max-w-[350px] text-center mt-10'>
+                        <span className='text-gold leading-tight'>
                             {movie.sinopse}
                         </span>
                     </div>
                 </div>
-
-                {/* <Video /> */}
 
             </div>
 
