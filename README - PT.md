@@ -20,3 +20,5 @@ A API que é consumida vem da TMDB.
 ## Back-end 
 
 O back-end do Andromeda está hospedado no Firebase.
+
+(./assets/screenshot.png)
