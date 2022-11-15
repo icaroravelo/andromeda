@@ -4,23 +4,27 @@ import '../App.css'
 import Originals from '../components/Originals'
 import requests from '../requests'
 import Row from './Row'
+import Banner from '../components/Banner'
 
 function HomeScreen() {
   return (
-    <div className="bg-black1">
-      <Header />
+    <div className="">
+      {/* <Header /> */}
+
+      {/* Banner */}
+      <Banner />
 
       {/* Carrousel */}
-      <Carrousel />
+      {/* <Carrousel /> */}
 
       {/* Originals */}
       {/* <Originals /> */}
 
-      <Row
+      {/* <Row
         title='ORIGINAIS'
         fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow
-      />
+      /> */}
 
       <Row
         title='MELHORES AVALIAÇÕES'

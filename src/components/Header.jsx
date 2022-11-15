@@ -8,12 +8,12 @@ const Header = () => {
     const [toggle, setToggle] = useState(false);
 
     return (
-        <div className='flex flex-1 items-center justify-between'>
+        <div className='flex flex-1 items-center justify-around'>
             {/* Name & Navbar */}
-            <div className='flex justify-center space-x-4'>
-                <Link to="/" className='logo items-center p-36'>
+            <div className='flex justify-center items-center space-x-4 -mt-6'>
+                <Link to="/" className='logo items-center p-8 md:p-10'>
                     <h1
-                        className='text-gold text-xl md:text-3xl justify-start'>
+                        className='text-gold text-xl md:text-3xl justify-start mt-6 md:mt-4'>
                         Andromeda
                     </h1>
                 </Link>
@@ -41,8 +41,8 @@ const Header = () => {
             </div>
 
             {/* User Infos */}
-            <div>
-                <div className='items-center space-x-1 right-10 ml-20 md:ml-36 flex'>
+            <div className='ml-12'>
+                <div className='items-center space-x-1 right-10 ml-72 md:ml-26 flex'>
                     <span className='text-gold'>Ravelo</span>
                     <img src={image} alt="User" className='h-[20px] md:h-[30px] rounded-full' />
                 </div>

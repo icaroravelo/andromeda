@@ -16,6 +16,10 @@
   -webkit-font-smoothing: antialiased;
 }
 
+* {
+  margin: 0;
+}
+
 .logo {
   font-family: 'Rochester';
 }
