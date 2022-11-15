@@ -41,12 +41,12 @@ const Header = () => {
             </div>
 
             {/* User Infos */}
-            <div className='ml-12'>
-                <div className='items-center space-x-1 right-10 ml-72 md:ml-26 flex'>
+            {/* <div className='ml-12'>
+                <div className='items-center space-x-1 md:ml-26 flex'>
                     <span className='text-gold'>Ravelo</span>
-                    <img src={image} alt="User" className='h-[20px] md:h-[30px] rounded-full' />
+                    <img src={image} alt="User" className='h-[20px] md:h-[30px] rounded-full ml-10' />
                 </div>
-            </div>
+            </div> */}
 
             {/* Responsive Menu */}
             <div className='md:hidden flex flex-1 justify-end items-center'>
@@ -57,7 +57,7 @@ const Header = () => {
                     onClick={() => setToggle((prev) => !prev)}
                 />
 
-                <div className={`${toggle ? 'flex' : 'hidden'} z-50 bg-black-gradient absolute right-0 mx-4 bg-zinc-900/90 rounded-xl min-h-[200px] min-w-[175px] my-4 items-center`}>
+                <div className={`${toggle ? 'flex' : 'hidden'} z-50 bg-black-gradient absolute right-10 mx-4 bg-zinc-900/90 rounded-xl min-h-[200px] min-w-[175px] my-4 items-center`}>
                     <li className='list-none flex flex-col flex-1 cursor-pointer text-[16px] mr-10 text-gold text-center justify-center'>
                         <Link to="/">
                             <p className='hover:font-semibold'>Início</p>
